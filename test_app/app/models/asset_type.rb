@@ -1,3 +1,3 @@
 class AssetType < ApplicationRecord
-    has_many :assets
+    has_many :asset_type_options
 end

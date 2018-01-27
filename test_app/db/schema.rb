@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180124082815) do
+ActiveRecord::Schema.define(version: 20180127072122) do
 
-  create_table "asset_assets", id: false, force: :cascade do |t|
-    t.integer "asset_a_id", null: false
-    t.integer "asset_b_id", null: false
+  create_table "asset_type_options", force: :cascade do |t|
+    t.string "field_name"
+    t.string "field_type"
+    t.integer "asset_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["asset_type_id"], name: "index_asset_type_options_on_asset_type_id"
   end
 
   create_table "asset_types", force: :cascade do |t|
-    t.string "type_name"
-  end
-
-  create_table "assets", force: :cascade do |t|
-    t.string "name"
-    t.integer "asset_type_id"
-    t.index ["asset_type_id"], name: "index_assets_on_asset_type_id"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
