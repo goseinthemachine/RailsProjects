@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## About Achievement Tracker
+This application will be used to create and track achievements aimed at children and getting their chores done. Thought this would be a fun project with a fun outcome.
